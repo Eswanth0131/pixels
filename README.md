@@ -1,15 +1,23 @@
-#pixels
+# pixels-to-predictions
 
-This project is run directly from the notebook.
+Fine-tuning SmolVLM-500M for multimodal science multiple-choice reasoning.
 
-What you need
+---
 
-You need the dataset folder to be replicated exactly the way the notebook expects.
+## Requirements
 
-Google Drive setup
+- A Google account with Drive access (for Colab), or a local Python environment
+- The competition dataset with the exact folder structure below
 
-Put the full folder in your Google Drive exactly like this:
+---
 
+## Dataset Setup
+
+### Google Drive (Colab)
+
+Place the dataset folder in your Drive exactly like this:
+
+```
 MyDrive/
 └── pixels-to-predictions/
     ├── train.csv
@@ -21,19 +29,19 @@ MyDrive/
             ├── train/
             ├── val/
             └── test/
+```
 
-Then open the notebook in Colab and run it from top to bottom.
+The notebook mounts Drive and reads from:
 
-The notebook mounts Google Drive and reads from:
-
+```
 /content/drive/MyDrive/pixels-to-predictions
+```
 
-So the folder structure must match exactly.
+### Local
 
-Local setup
+Replicate the same structure on your machine:
 
-You can also run locally, but you must replicate the same folder exactly on your machine:
-
+```
 pixels-to-predictions/
 ├── train.csv
 ├── val.csv
@@ -44,24 +52,29 @@ pixels-to-predictions/
         ├── train/
         ├── val/
         └── test/
+```
 
-If running locally, update the root path in the script or notebook so it points to your local pixels-to-predictions folder.
+Then update the root path variable in the notebook to point to your local folder.
 
-How to run
+---
 
-Colab
+## How to Run
 
-1. Upload or copy the dataset folder into Google Drive with the exact structure above.
-2. Open the notebook in Colab.
-3. Run all cells in order.
+### Colab
 
-Local
+1. Copy the dataset folder into Google Drive with the exact structure above
+2. Open the notebook in Colab
+3. Run all cells top to bottom
 
-1. Download the dataset.
-2. Recreate the exact folder structure above.
-3. Update the root path in the script or notebook if needed.
-4. Run the notebook or Python script.
+### Local
 
-Important note
+1. Download the dataset
+2. Recreate the folder structure above
+3. Update the root path in the notebook
+4. Run the notebook or script
 
-The folder structure matters. If the data is not laid out exactly the same way, image loading will fail.
+---
+
+## Note
+
+The folder structure must match exactly. If the paths are off, image loading will fail.
