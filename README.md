@@ -77,4 +77,4 @@ Then update the root path variable in the notebook to point to your local folder
 
 ## Note
 
-The folder structure must match exactly. If the paths are off, image loading will fail.
+The folder structure must match exactly. If the paths are off, image loading will fail. Please find all related project files and weights in google drive: https://drive.google.com/drive/folders/15tq3ca1YRA6y9EzprRRAn5E85UbRSPXt?usp=sharing
